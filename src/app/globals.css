@@ -1,26 +1,22 @@
 @import "tailwindcss";
 
+/* Custom CSS Variables untuk warna yang tidak ada di Tailwind default */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --gradient-hero: linear-gradient(
+        135deg,
+        #eff6ff 0%,
+        #dbeafe 50%,
+        #bfdbfe 100%
+    );
+    --gradient-soft: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Background gradient untuk body */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--gradient-soft);
 }

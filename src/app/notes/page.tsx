@@ -1,6 +1,8 @@
 import { noteService } from "@/services/noteService";
 import NotesList from "../components/NotesList";
 
+export const dynamic = "force-dynamic";
+
 // Ini tetap Server Component (fetch data)
 export default async function Notes() {
     const notes = await noteService.findAll();
